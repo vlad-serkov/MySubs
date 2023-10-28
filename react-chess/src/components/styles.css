@@ -1,0 +1,14 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+.favorite{
+  position: absolute;
+width: 100px;
+height: 35px;
+background: #5364FF;
+border-radius: 91px;
+border: #5364FF;
+font-family: Arial, Helvetica, sans-serif;
+}

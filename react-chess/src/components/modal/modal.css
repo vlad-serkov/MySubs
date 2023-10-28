@@ -1,0 +1,17 @@
+.modall {
+    height: 400px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    padding-top: 110px;
+    left:20;
+
+}
+
+.modal__content{
+    padding: 10px;
+    border-radius: 12px;
+    background-color: white;
+    height: 200px;
+    width: 400px;
+}
