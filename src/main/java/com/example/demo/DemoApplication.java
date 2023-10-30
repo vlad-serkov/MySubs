@@ -28,13 +28,13 @@ public class DemoApplication {
         return args -> {
             log.info("-------lol--------");
             registrationService.register(new RegistrationRequest(
-                    "Lord",
+                    "Влад Мармелад",
                     "Serkov",
-                    "lordr7638@gmail.co",
+                    "vladuss_1337@list.ru",
                     "password"
             ));
 
-            appUserService.enableAppUser("lordr7638@gmail.co");
+            appUserService.enableAppUser("lordr7638@gmail.com");
         };
     }
 

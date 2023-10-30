@@ -4,6 +4,7 @@ import com.example.demo.registration.token.ConfirmationToken;
 import com.example.demo.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -53,7 +54,9 @@ public class AppUserService implements UserDetailsService {
 
         appUserRepository.save(appUser);
 
-        String token = UUID.randomUUID().toString();
+
+        String token =  RandomStringUtils.randomAlphanumeric(6);
+
 
         ConfirmationToken confirmationToken = new ConfirmationToken(
                 token,
@@ -70,9 +73,9 @@ public class AppUserService implements UserDetailsService {
         return token;
     }
 
-    public int enableAppUser(String email) {
+    public void enableAppUser(String email) {
         log.info("Enable app user");
-        return appUserRepository.enableAppUser(email);
+        appUserRepository.enableAppUser(email);
     }
     public List<AppUser> getUsers(){return appUserRepository.findAll();}
 }

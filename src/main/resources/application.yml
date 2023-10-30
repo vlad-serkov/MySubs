@@ -18,11 +18,11 @@ spring:
     show-sql: false
 
   mail:
-    host: smtp.gmail.com
-    port: 587
-    username: swagqp6068@gmail.com
-    password: lehduwchzuhmceuk
-
+    host: smtp.yandex.ru
+    port: 465
+    username: vkad.serkov@yandex.ru
+    password: asidigxvqqerdqpq
+    protocol: smtps
     properties:
       mail:
         smtp:
