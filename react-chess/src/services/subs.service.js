@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'https://a954-90-154-91-217.ngrok-free.app/api/v1/';
+const API_URL = 'http://localhost:8080/api/v1/';
 
 const addSub = (name, namePlan, cost, date, paymentMethods, email) => {
 	return axios.post(
@@ -24,7 +24,7 @@ const addSub = (name, namePlan, cost, date, paymentMethods, email) => {
 // 		)
 const getSubs = email => {
 	return fetch(
-		'https://a954-90-154-91-217.ngrok-free.app/api/v1/sub?email=vladuss_1337@list.ru',
+		'http://localhost:8080/api/v1/sub?email=vladuss_1337@list.ru',
 		{
 			headers: authHeader(),
 		},
