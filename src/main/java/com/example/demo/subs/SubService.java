@@ -18,10 +18,10 @@ public class SubService {
     public void createSub(SubDto subDto) throws NotFoundException {
         AppUser user = userRepository.findByEmail(subDto.getEmail())
                 .orElseThrow(()->new NotFoundException(String.format("user with this email: %s not found", subDto.getEmail())));
-        subRepository.save(new Sub(subDto.getNameSubs(),
-                subDto.getNamePlan(),
+        subRepository.save(new Sub(subDto.getName(),
+                subDto.getName(),
                 subDto.getCost(),
-                subDto.getDateStart(),
+                subDto.getDate(),
                 subDto.getPaymentMethods(),
                 user));
     }
@@ -31,9 +31,11 @@ public class SubService {
         List<SubDto> subs = new ArrayList<>();
         user.getSubs().forEach( sub -> {
             for (int i = 0; i < 12; i++) {
-                subs.add(new SubDto(sub.getNameSubs(),
+                subs.add(new SubDto(sub.getName(), sub.getNamePlan(),
                         sub.getCost(),
-                        sub.getDateStart().plusDays(i*30)));
+                        sub.getDate().plusDays(i*30),
+                        sub.getPaymentMethods(),
+                        user.getEmail()));
             }
         });
         return subs;

@@ -12,20 +12,20 @@ public class Sub {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nameSubs;
+    private String name;
     private String namePlan;
     private int cost;
-    private LocalDateTime dateStart;
+    private LocalDateTime date;
     private String paymentMethods;
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private AppUser user;
 
-    public Sub(String nameSubs, String namePlan, int cost, LocalDateTime dateStart,  String paymentMethods, AppUser user) {
-        this.nameSubs = nameSubs;
+    public Sub(String name, String namePlan, int cost, LocalDateTime date, String paymentMethods, AppUser user) {
+        this.name = name;
         this.namePlan = namePlan;
         this.cost = cost;
-        this.dateStart = dateStart;
+        this.date = date;
         this.paymentMethods = paymentMethods;
         this.user = user;
     }
