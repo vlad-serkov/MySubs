@@ -34,7 +34,7 @@ public class DemoApplication {
                     "password"
             ));
 
-            appUserService.enableAppUser("lordr7638@gmail.com");
+            appUserService.enableAppUser("vladuss_1337@list.ru");
         };
     }
 

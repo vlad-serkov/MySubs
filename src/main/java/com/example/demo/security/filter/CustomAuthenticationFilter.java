@@ -28,7 +28,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @Slf4j
 @RequiredArgsConstructor
 public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
-    @Autowired
     private final AuthenticationManager authenticationManager;
 
     @Override
@@ -78,6 +77,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList()));
         tokens.put("username", user.getFirstName() + " " + user.getLastName());
+        tokens.put("email", user.getEmail());
         response.setContentType(APPLICATION_JSON_VALUE);
         try {
             new ObjectMapper().writeValue(response.getOutputStream(), tokens);

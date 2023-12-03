@@ -1,5 +1,6 @@
 package com.example.demo.appuser;
 
+import com.example.demo.subs.Sub;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Getter
 @Setter
@@ -35,6 +37,8 @@ public class AppUser implements UserDetails {
     private String lastName;
     private String email;
     private String password;
+    @OneToMany(mappedBy = "user")
+    private List<Sub> subs;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked = false;
