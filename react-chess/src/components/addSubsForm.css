@@ -1,0 +1,121 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.add-icon {
+	width: 60px;
+	height: 60px;
+	background-color: aliceblue;
+	border-radius: 20px;
+	font-size: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.form-add {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 300px;
+}
+
+.first-block {
+	display: 'flex';
+	flex-direction: 'column';
+	border-radius: 15px;
+	padding: 30px;
+	background: linear-gradient(to right, #fdc830, #f37335);
+}
+
+.form-add__input {
+	background: none;
+	border: 1px solid white;
+	padding-bottom: 5px;
+	border-style: none none solid none;
+}
+
+.input-nameSubs {
+	margin-left: 15px;
+}
+
+.input-namePlan {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.input-cost {
+	background: none;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 10px;
+	max-width: 150px;
+	margin-right: 20px;
+}
+
+.form__valute {
+	background-color: white;
+	color: grey;
+	width: 80px;
+	height: 40px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
+}
+
+.second-block {
+	padding: 0 10px;
+}
+
+.payment {
+	display: flex;
+	margin: 10px 0;
+}
+
+.payment__text {
+	font-size: 12px;
+	margin-right: 5px;
+}
+
+.payment-end {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.payment-end__text {
+	font-size: 12px;
+	margin-right: 20px;
+}
+
+.methods-payment {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+	align-items: center;
+}
+
+.dropdown {
+	width: 150px;
+	height: 20px;
+	text-align: center;
+}
+
+.under-border {
+	border: 1px grey solid;
+	border-style: none none solid none;
+	padding-bottom: 5px;
+}
+
+.btn-submit {
+	width: 100%;
+	max-width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	margin-top: 25px;
+	justify-content: center;
+}
