@@ -5,8 +5,8 @@ server:
 
 spring:
   datasource:
-    password: 0000
-    url: jdbc:postgresql://localhost:5432/registration
+    password: 1234
+    url: jdbc:postgresql://localhost:5432/tracker
     username: postgres
   jpa:
     hibernate:

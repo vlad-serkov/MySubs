@@ -24,8 +24,8 @@
 }
 
 .first-block {
-	display: 'flex';
-	flex-direction: 'column';
+	align-items: center;
+	/*display: flex;*/
 	border-radius: 15px;
 	padding: 30px;
 	background: linear-gradient(to right, #fdc830, #f37335);

@@ -10,10 +10,10 @@ import AuthService from '../services/auth.service';
 function AddSubsForm() {
 	const paymentMethods = [
 		{
-			name: 'ApplePay',
+			name: 'MirPay',
 		},
-		{ name: 'GooglePay' },
-		{ name: 'Карта' },
+		{ name: 'SberPay' },
+		{ name: 'Банковковской картой' },
 	];
 	const initialState = {
 		name: '',
@@ -34,8 +34,8 @@ function AddSubsForm() {
 				return {
 					...formData,
 					dateEnd: {
-						day: date.getDate(),
-						month: date.getMonth() + 1,
+						day: date.getDate() + 30,
+						month: date.getMonth(),
 						year: date.getFullYear(),
 					},
 				};
@@ -80,7 +80,7 @@ function AddSubsForm() {
 						alignItems: 'center',
 					}}
 				>
-					<div className='add-icon'>Add icon</div>
+					<div className='add-icon'>image</div>
 					<input
 						className='form-add__input input-name'
 						value={formData.name}

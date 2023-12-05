@@ -28,8 +28,8 @@ public class DemoApplication {
         return args -> {
             log.info("-------lol--------");
             registrationService.register(new RegistrationRequest(
-                    "Влад Мармелад",
-                    "Serkov",
+                    "Влад",
+                    "Tester",
                     "vladuss_1337@list.ru",
                     "password"
             ));
