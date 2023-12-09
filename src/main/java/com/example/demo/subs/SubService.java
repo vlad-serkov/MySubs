@@ -40,4 +40,10 @@ public class SubService {
         });
         return subs;
     }
+
+    public void deleteSub(Long subId) throws NotFoundException {
+        Sub sub = subRepository.findById(subId)
+                .orElseThrow(() -> new NotFoundException(String.format("Subscription with ID %s not found", subId)));
+        subRepository.delete(sub);
+    }
 }

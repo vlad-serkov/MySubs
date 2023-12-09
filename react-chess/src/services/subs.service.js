@@ -35,6 +35,18 @@ const getSubs = email => {
 const SubsService = {
 	addSub,
 	getSubs,
+	deleteSub: (subId) => {
+		return axios.delete(`http://localhost:8080/api/v1/sub/${subId}`, { headers: authHeader() })
+			.then(response => {
+				console.log(response.data); // успешный ответ
+			})
+			.catch(error => {
+				console.error(error); // обработка ошибки
+			});
+
+	},
 };
+
+
 
 export default SubsService;

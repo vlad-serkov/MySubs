@@ -72,14 +72,10 @@ function AddSubsForm() {
 			});
 	};
 	return (
+		<div className='form-container'>
 		<form onSubmit={handlerSubmit} className='form-add'>
 			<div className='first-block'>
-				<div
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-					}}
-				>
+				<div>
 					<div className='add-icon'>image</div>
 					<input
 						className='form-add__input input-name'
@@ -171,6 +167,7 @@ function AddSubsForm() {
 			</div>
 			<Button className='btn-submit'>Создать подписку</Button>
 		</form>
+		</div>
 	);
 }
 

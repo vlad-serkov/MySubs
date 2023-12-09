@@ -68,14 +68,14 @@ const App = () => {
 				<div className='navbar-nav mr-auto'>
 					<li className='nav-item'>
 						<Link to={'/home'} className='nav-link'>
-							Home
+							Домашняя страница
 						</Link>
 					</li>
 
 					{showModeratorBoard && (
 						<li className='nav-item'>
 							<Link to={'/mod'} className='nav-link'>
-								Moderator Board
+								Страница модератора
 							</Link>
 						</li>
 					)}
@@ -83,7 +83,7 @@ const App = () => {
 					{showAdminBoard && (
 						<li className='nav-item'>
 							<Link to={'/admin'} className='nav-link'>
-								Admin Board
+								Страница админа
 							</Link>
 						</li>
 					)}
@@ -91,21 +91,28 @@ const App = () => {
 					{currentUser && (
 						<li className='nav-item'>
 							<Link to={'/user'} className='nav-link'>
-								User
+								Ваши подписки
 							</Link>
 						</li>
 					)}
 					{currentUser && (
 						<li className='nav-item'>
 							<Link to={'/addsub'} className='nav-link'>
-								Add subs
+								Добавить подписку
 							</Link>
 						</li>
 					)}
 					{currentUser && (
 						<li className='nav-item'>
 							<Link to={'/calendar'} className='nav-link'>
-								Calendar
+								Календарь
+							</Link>
+						</li>
+					)}
+					{currentUser && (
+						<li className='nav-item'>
+							<Link to={'/mail-search'} className='nav-link'>
+								Найти по mail
 							</Link>
 						</li>
 					)}
@@ -120,7 +127,7 @@ const App = () => {
 						</li>
 						<li className='nav-item'>
 							<a href='/login' className='nav-link' onClick={logOut}>
-								LogOut
+								Выйти
 							</a>
 						</li>
 					</div>
@@ -128,13 +135,13 @@ const App = () => {
 					<div className='navbar-nav ml-auto'>
 						<li className='nav-item'>
 							<Link to={'/login'} className='nav-link'>
-								Login
+								Войти
 							</Link>
 						</li>
 
 						<li className='nav-item'>
 							<Link to={'/register'} className='nav-link'>
-								Sign Up
+								Зарегистрироваться
 							</Link>
 						</li>
 					</div>

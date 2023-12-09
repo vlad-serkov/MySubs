@@ -38,7 +38,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/api/v*/registration/**").permitAll()
+                .authorizeRequests().antMatchers().permitAll()
                 .antMatchers(GET, "/api/user/**").hasAnyAuthority("USER")
                 .antMatchers(POST, "/api/user/save/**").hasAnyAuthority("ADMIN")
                 .anyRequest().permitAll();
@@ -76,4 +76,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
+
+
 }
