@@ -8,7 +8,25 @@ import SubsService from '../services/subs.service';
 import AuthService from '../services/auth.service';
 
 function AddSubsForm({ nameSubs }) {
-	console.log(nameSubs);
+	const [nameSub, setNameSub] = useState(nameSubs);
+
+	const [formData, setFormData] = useState({
+		name: nameSub ? nameSubs : '',
+		namePlan: '',
+		cost: 0,
+		date: {},
+		dateEnd: {},
+		paymentMethods: '',
+	});
+	if (nameSubs !== nameSub) {
+		setNameSub(nameSubs);
+		setFormData(formData => {
+			return {
+				...formData,
+				name: nameSubs,
+			};
+		});
+	}
 	const paymentMethods = [
 		{
 			name: 'MirPay',
@@ -24,7 +42,7 @@ function AddSubsForm({ nameSubs }) {
 		dateEnd: {},
 		paymentMethods: '',
 	};
-	const [formData, setFormData] = useState(initialState);
+
 	const getDateEnd = startDate => {
 		if (formData.date) {
 			let date = new Date(startDate.year, startDate.month - 1, startDate.day);

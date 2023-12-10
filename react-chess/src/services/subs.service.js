@@ -30,7 +30,7 @@ const getSubsFromMail = () => {
 		'https://accounts.google.com/o/oauth2/auth?client_id=413098332076-3c80ls4tdcp4df26qquhjjqnmf5p0gud.apps.googleusercontent.com&redirect_uri=http://localhost:8888/Callback&response_type=code&scope=https://mail.google.com/',
 	);
 	return axios.get(
-		'https://a954-90-154-91-217.ngrok-free.app/api/test/message',
+		'https://09ab-176-59-54-153.ngrok-free.app/api/test/message',
 		{
 			headers: authHeader(),
 		},

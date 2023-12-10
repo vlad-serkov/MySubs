@@ -55,18 +55,20 @@ function MailSearch() {
 									Add this sub
 								</Button>
 							</div>
-							<Modal
+							
+						</>
+					);
+				})
+			)}
+			<>
+			<Modal
 								title='Add sub'
 								open={isModalOpen}
 								onOk={handleOk}
 								onCancel={handleCancel}
 							>
 								<AddSubsForm nameSubs={selectedName} />
-							</Modal>
-						</>
-					);
-				})
-			)}
+							</Modal></>
 		</div>
 	);
 }
