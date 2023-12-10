@@ -38,35 +38,35 @@ function MailSearch() {
 			) : (
 				arraySubs.map(item => {
 					return (
-						<div
-							style={{
-								display: 'flex',
-								marginBottom: 15,
-								border: '1px solid grey',
-								width: '250px',
-								justifyContent: 'space-between',
-								padding: 10,
-							}}
-							key={item}
-						>
-							<p>{item}</p>
-							<Button type='primary' onClick={e => showModal(item)}>
-								Add this sub
-							</Button>
-						</div>
+						<>
+							<div
+								style={{
+									display: 'flex',
+									marginBottom: 15,
+									border: '1px solid grey',
+									width: '250px',
+									justifyContent: 'space-between',
+									padding: 10,
+								}}
+								key={item}
+							>
+								<p>{item}</p>
+								<Button type='primary' onClick={e => showModal(item)}>
+									Add this sub
+								</Button>
+							</div>
+							<Modal
+								title='Add sub'
+								open={isModalOpen}
+								onOk={handleOk}
+								onCancel={handleCancel}
+							>
+								<AddSubsForm nameSubs={selectedName} />
+							</Modal>
+						</>
 					);
 				})
 			)}
-			<>
-				<Modal
-					title='Add sub'
-					open={isModalOpen}
-					onOk={handleOk}
-					onCancel={handleCancel}
-				>
-					<AddSubsForm nameSubs={selectedName} />
-				</Modal>
-			</>
 		</div>
 	);
 }

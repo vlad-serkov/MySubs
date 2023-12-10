@@ -17,7 +17,7 @@ function AddSubsForm({ nameSubs }) {
 		{ name: 'Банковковской картой' },
 	];
 	const initialState = {
-		name: 'sadsa',
+		name: nameSubs ? nameSubs : '',
 		namePlan: '',
 		cost: 0,
 		date: {},
@@ -81,7 +81,11 @@ function AddSubsForm({ nameSubs }) {
 						<input
 							className='form-add__input input-name'
 							value={formData.name}
-							onChange={e => setFormData({ ...formData, name: e.target.value })}
+							onChange={e =>
+								setFormData(formData => {
+									return { ...formData, name: e.target.value };
+								})
+							}
 							type='text'
 							placeholder='Имя подписки'
 						/>
@@ -90,7 +94,9 @@ function AddSubsForm({ nameSubs }) {
 						className='form-add__input input-namePlan'
 						value={formData.namePlan}
 						onChange={e =>
-							setFormData({ ...formData, namePlan: e.target.value })
+							setFormData(formData => {
+								return { ...formData, namePlan: e.target.value };
+							})
 						}
 						type='text'
 						placeholder='Имя плана'
@@ -103,7 +109,11 @@ function AddSubsForm({ nameSubs }) {
 						<input
 							className='input-cost'
 							value={formData.cost}
-							onChange={e => setFormData({ ...formData, cost: e.target.value })}
+							onChange={e =>
+								setFormData(formData => {
+									return { ...formData, cost: e.target.value };
+								})
+							}
 							type='number'
 							placeholder='2.99'
 						/>
@@ -158,7 +168,9 @@ function AddSubsForm({ nameSubs }) {
 						<Dropdown
 							value={formData.paymentMethods}
 							onChange={e =>
-								setFormData({ ...formData, paymentMethods: e.target.value })
+								setFormData(formData => {
+									return { ...formData, paymentMethods: e.target.value };
+								})
 							}
 							placeholder='Выбрать..'
 							inputId='dd-city'
