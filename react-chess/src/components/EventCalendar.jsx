@@ -9,13 +9,13 @@ function EventCalendar() {
 	const [subs, setSubs] = useState([]);
 	const getSubs = async () => {
 		const data = await SubsService.getSubs(user.email);
-		console.log(data);
+
 		setSubs(data);
 	};
 
 	useEffect(() => {
 		getSubs();
-	}, []);
+	}, [user.email]);
 
 	const dateCellRender = value => {
 		const date = value.format('YYYY-MM-DD') + ' 12:00';

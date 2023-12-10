@@ -17,6 +17,7 @@ import BoardAdmin from './components/BoardAdmin';
 import AddSubsForm from './components/AddSubsForm';
 import EventBus from './common/EventBus';
 import EventCalendar from './components/EventCalendar';
+import MailSearch from './components/MailSearch';
 
 const App = () => {
 	const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -156,6 +157,7 @@ const App = () => {
 					<Route path='/profile' element={<Profile />} />
 					<Route path='/user' element={<BoardUser />} />
 					<Route path='/addsub' element={<AddSubsForm />} />
+					<Route path='/mail-search' element={<MailSearch />} />
 					<Route path='/calendar' element={<EventCalendar />} />
 					<Route path='/mod' element={<BoardModerator />} />
 					<Route path='/admin' element={<BoardAdmin />} />
